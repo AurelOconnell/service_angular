@@ -1,22 +1,15 @@
 import { Injectable } from '@angular/core';
-
-export interface Cocktail {
-  name: string;
-  price: string;
-  image: string;
-}
+import { Cocktail } from './model/Cocktail';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CocktailService {
 
-  constructor() { }
-
   public cocktails: Array<Cocktail> = [
-    {name: "cocktail1", price: "7€", image: "url_image1"},
-    {name: "cocktail2", price: "7€", image: "url_image2"},
-    {name: "cocktail3", price: "7€", image: "url_image3"},
+    {name: "cocktail1", price: 7, image: "url_image1"},
+    {name: "cocktail2", price: 10, image: "url_image2"},
+    {name: "cocktail3", price: 8, image: "url_image3"},
   ];
 
   public getCocktails(): Array<Cocktail> {

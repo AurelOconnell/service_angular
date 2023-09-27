@@ -1,21 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CocktailService } from '../cocktail.service';
-import { Cocktail } from '../cocktail.service';
 
 @Component({
   selector: 'app-cocktail-list',
   templateUrl: './cocktail-list.component.html',
   styleUrls: ['./cocktail-list.component.css']
 })
-export class CocktailListComponent implements OnInit {
-
-  cocktails: Array<Cocktail> = [];
+export class CocktailListComponent {
 
   constructor(public cocktailService: CocktailService) {
     
   }
-
-  ngOnInit(): void {
-    this.cocktails = this.cocktailService.getCocktails();
-  }
+    cocktails = this.cocktailService.getCocktails();
 }
