@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CocktailService } from '../cocktail.service';
+import { Cocktail } from '../cocktail.service';
 
 @Component({
   selector: 'app-cocktail-list',
@@ -8,7 +9,7 @@ import { CocktailService } from '../cocktail.service';
 })
 export class CocktailListComponent implements OnInit {
 
-  cocktails: Array<object> = [];
+  cocktails: Array<Cocktail> = [];
 
   constructor(public cocktailService: CocktailService) {
     
